@@ -2,7 +2,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { InventoryItem, RoutineTask, Goal, ChatMessage, Expense, Note, UserProfile } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
 
 function getCompressedContext(context: { 
   inventory: InventoryItem[]; 
